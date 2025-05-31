@@ -1,29 +1,26 @@
 # Core interface dependencies
-streamlit>=1.28.0
-fastapi>=0.104.0
-uvicorn>=0.24.0
+streamlit
+pandas
+numpy
 
 # Computer Vision
-opencv-python>=4.8.0
-ultralytics>=8.0.0
-torch>=1.8.0
-torchvision>=0.9.0
-scikit-image>=0.18.0
+opencv-python-headless
+ultralytics
+torch
+torchvision
+scikit-image
 
 # Image processing
-Pillow>=10.0.0
-numpy>=1.24.0
+Pillow
 
-# Barcode processing (VERSIÓN COMPATIBLE CON PYTHON 3.9)
-pyzbar>=0.1.9
-zxing-cpp>=1.4.0,<2.0.0
+# Barcode processing
+pyzbar
+zxing-cpp
 
 # API and utilities
-requests>=2.28.0
-pandas>=2.0.0
+requests
+fastapi
+uvicorn
+python-multipart
+matplotlib
 pathlib
-python-multipart>=0.0.6
-matplotlib>=3.6.0
-
-
-
