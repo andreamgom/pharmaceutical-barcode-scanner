@@ -1,5 +1,16 @@
 # streamlit_app.py - VERSIÓN COMPLETA CON TODAS LAS MEJORAS
 import streamlit as st
+
+
+# Configuración de página
+st.set_page_config(
+    page_title="Sistema de Detección de Códigos Farmacéuticos",
+    page_icon="💊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+
 import pandas as pd
 from pathlib import Path
 import time
@@ -22,13 +33,7 @@ except ImportError as e:
     IMPORTS_OK = False
 
 
-# Configuración de página
-st.set_page_config(
-    page_title="Sistema de Detección de Códigos Farmacéuticos",
-    page_icon="💊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+
 
 # CSS básico integrado (SIN archivo externo)
 def load_custom_css():
