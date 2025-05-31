@@ -1,25 +1,15 @@
+# Core interface dependencies
 streamlit
 pandas
 numpy
 
-# Computer Vision
+# Image processing (headless versions for cloud)
 opencv-python-headless
-ultralytics
-torch
-torchvision
-scikit-image
-
-# Image processing
 Pillow
 
-# Barcode processing
+# Barcode processing (SOLO pyzbar - más compatible)
 pyzbar
-zxing-cpp
 
-# API and utilities
+# Utilities
 requests
-fastapi
-uvicorn
-python-multipart
-matplotlib
 pathlib
