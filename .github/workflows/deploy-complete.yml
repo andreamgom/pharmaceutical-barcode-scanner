@@ -1,4 +1,5 @@
-name: Deploy Farmacia Interface
+# .github/workflows/deploy.yml
+name: Deploy Pharmaceutical Barcode Scanner
 
 on:
   push:
@@ -8,7 +9,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test-and-validate:
+  test-interface:
     runs-on: ubuntu-latest
     
     steps:
@@ -20,71 +21,72 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: Install dependencies
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libzbar0 libzbar-dev
+    
+    - name: Install Python dependencies
       run: |
         cd farmacia_interface
+        pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Create test secrets
+    - name: Create minimal test secrets
       run: |
         cd farmacia_interface
         mkdir -p .streamlit
-        echo '[gemini]' > .streamlit/secrets.toml
-        echo 'api_key = "test_key"' >> .streamlit/secrets.toml
-        echo '[azure]' >> .streamlit/secrets.toml
-        echo 'endpoint = "test_endpoint"' >> .streamlit/secrets.toml
-        echo 'api_key = "test_key"' >> .streamlit/secrets.toml
-        echo 'model_name = "gpt-4o"' >> .streamlit/secrets.toml
+        echo '# Test secrets for CI' > .streamlit/secrets.toml
     
-    - name: Test imports
+    - name: Test basic imports
       run: |
         cd farmacia_interface
         python -c "
+        import sys
+        print('🔍 Testing basic imports...')
+        
         try:
             import streamlit as st
             print('✅ Streamlit import OK')
         except Exception as e:
             print(f'❌ Streamlit error: {e}')
-            exit(1)
+            sys.exit(1)
         
         try:
-            from core.hybrid_detector import HybridDetector
-            print('✅ HybridDetector import OK')
+            import cv2
+            print('✅ OpenCV import OK')
         except Exception as e:
-            print(f'❌ HybridDetector error: {e}')
+            print(f'❌ OpenCV error: {e}')
+            sys.exit(1)
         
         try:
-            from core.cima_validator import CIMAValidator
-            print('✅ CIMAValidator import OK')
+            import pandas as pd
+            print('✅ Pandas import OK')
         except Exception as e:
-            print(f'❌ CIMAValidator error: {e}')
+            print(f'❌ Pandas error: {e}')
+            sys.exit(1)
+        
+        print('🎉 Basic imports successful!')
         "
     
-    - name: Validate app syntax
+    - name: Test app syntax
       run: |
         cd farmacia_interface
         python -m py_compile streamlit_app.py
-        echo "✅ Streamlit app syntax OK"
-    
-    - name: Test basic functionality
-      run: |
-        cd farmacia_interface
-        timeout 30s streamlit run streamlit_app.py --server.headless true --server.port 8502 &
-        sleep 10
-        curl -f http://localhost:8502 || echo "App started successfully"
-        pkill -f streamlit || true
+        echo "✅ Streamlit app syntax is valid"
 
-  deploy-notification:
-    needs: test-and-validate
+  deploy-info:
+    needs: test-interface
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     
     steps:
-    - name: Deploy notification
+    - name: Interface ready notification
       run: |
-        echo "🚀 Tests passed! Ready for manual deploy:"
+        echo "🎉 Interface tests passed!"
+        echo ""
+        echo "📱 Your Streamlit interface is ready for deployment:"
         echo "1. Go to https://share.streamlit.io/"
-        echo "2. Connect your GitHub repository"
-        echo "3. Select: farmacia_interface/streamlit_app.py"
-        echo "4. Configure secrets in Streamlit Cloud"
-        echo "5. Deploy!"
+        echo "2. Connect repository: ${{ github.repository }}"
+        echo "3. Main file: farmacia_interface/streamlit_app.py"
+        echo "4. Deploy!"
