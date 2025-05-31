@@ -1,25 +1,9 @@
+# farmacia_interface/requirements.txt - OPTIMIZADO PARA STREAMLIT CLOUD
 streamlit
 pandas
 numpy
-
-# Computer Vision
 opencv-python-headless
-ultralytics
-torch
-torchvision
-scikit-image
-
-# Image processing
 Pillow
-
-# Barcode processing
 pyzbar
-zxing-cpp
-
-# API and utilities
 requests
-fastapi
-uvicorn
-python-multipart
-matplotlib
 pathlib
