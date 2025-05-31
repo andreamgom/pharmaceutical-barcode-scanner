@@ -1,9 +1,8 @@
-# .github/workflows/deploy.yml
 name: Deploy Pharmaceutical Barcode Scanner
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, develop ]
     paths: [ 'farmacia_interface/**' ]
   pull_request:
     branches: [ main ]
@@ -19,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: '3.10'  # CAMBIAR DE 3.9 A 3.10
     
     - name: Install system dependencies
       run: |
@@ -66,6 +65,20 @@ jobs:
             print(f'❌ Pandas error: {e}')
             sys.exit(1)
         
+        try:
+            from pyzbar import pyzbar
+            print('✅ pyzbar import OK')
+        except Exception as e:
+            print(f'❌ pyzbar error: {e}')
+            sys.exit(1)
+        
+        try:
+            import zxingcpp
+            print('✅ zxing-cpp import OK')
+        except Exception as e:
+            print(f'❌ zxing-cpp error: {e}')
+            # No fallar por zxing-cpp ya que pyzbar es suficiente
+        
         print('🎉 Basic imports successful!')
         "
     
@@ -90,3 +103,7 @@ jobs:
         echo "2. Connect repository: ${{ github.repository }}"
         echo "3. Main file: farmacia_interface/streamlit_app.py"
         echo "4. Deploy!"
+        echo ""
+        echo "🔗 Repository: https://github.com/${{ github.repository }}"
+        echo "📁 Interface file: farmacia_interface/streamlit_app.py"
+
