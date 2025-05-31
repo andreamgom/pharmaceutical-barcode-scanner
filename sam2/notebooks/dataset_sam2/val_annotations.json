@@ -1,0 +1,920 @@
+[
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      21,
+      158,
+      1097,
+      1495
+    ],
+    "category_id": 2,
+    "area": 1640015,
+    "point": [
+      570,
+      906
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      38,
+      177,
+      309,
+      225
+    ],
+    "category_id": 0,
+    "area": 69525,
+    "point": [
+      193,
+      289
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      324,
+      214,
+      236,
+      181
+    ],
+    "category_id": 0,
+    "area": 42716,
+    "point": [
+      442,
+      305
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      571,
+      202,
+      231,
+      179
+    ],
+    "category_id": 0,
+    "area": 41349,
+    "point": [
+      686,
+      292
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      790,
+      230,
+      243,
+      182
+    ],
+    "category_id": 0,
+    "area": 44226,
+    "point": [
+      912,
+      321
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      62,
+      390,
+      246,
+      184
+    ],
+    "category_id": 0,
+    "area": 45264,
+    "point": [
+      185,
+      482
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      316,
+      404,
+      253,
+      179
+    ],
+    "category_id": 0,
+    "area": 45287,
+    "point": [
+      443,
+      493
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      583,
+      406,
+      243,
+      197
+    ],
+    "category_id": 0,
+    "area": 47871,
+    "point": [
+      705,
+      505
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      802,
+      390,
+      249,
+      203
+    ],
+    "category_id": 0,
+    "area": 50547,
+    "point": [
+      927,
+      491
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      82,
+      598,
+      235,
+      186
+    ],
+    "category_id": 0,
+    "area": 43710,
+    "point": [
+      200,
+      691
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      301,
+      583,
+      286,
+      206
+    ],
+    "category_id": 0,
+    "area": 58916,
+    "point": [
+      444,
+      686
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      552,
+      585,
+      278,
+      224
+    ],
+    "category_id": 0,
+    "area": 62272,
+    "point": [
+      691,
+      697
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      809,
+      563,
+      288,
+      213
+    ],
+    "category_id": 0,
+    "area": 61344,
+    "point": [
+      953,
+      670
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      67,
+      806,
+      240,
+      193
+    ],
+    "category_id": 0,
+    "area": 46320,
+    "point": [
+      187,
+      903
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      71,
+      1024,
+      250,
+      208
+    ],
+    "category_id": 0,
+    "area": 52000,
+    "point": [
+      196,
+      1128
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      334,
+      1024,
+      234,
+      184
+    ],
+    "category_id": 0,
+    "area": 43056,
+    "point": [
+      451,
+      1116
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      572,
+      1000,
+      278,
+      218
+    ],
+    "category_id": 0,
+    "area": 60604,
+    "point": [
+      711,
+      1109
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      819,
+      1005,
+      240,
+      182
+    ],
+    "category_id": 0,
+    "area": 43680,
+    "point": [
+      939,
+      1096
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      53,
+      1215,
+      251,
+      215
+    ],
+    "category_id": 0,
+    "area": 53965,
+    "point": [
+      179,
+      1322
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      337,
+      1224,
+      245,
+      190
+    ],
+    "category_id": 0,
+    "area": 46550,
+    "point": [
+      459,
+      1319
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      585,
+      1224,
+      251,
+      198
+    ],
+    "category_id": 0,
+    "area": 49698,
+    "point": [
+      710,
+      1323
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      819,
+      1214,
+      259,
+      198
+    ],
+    "category_id": 0,
+    "area": 51282,
+    "point": [
+      948,
+      1313
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      325,
+      1412,
+      265,
+      205
+    ],
+    "category_id": 0,
+    "area": 54325,
+    "point": [
+      458,
+      1515
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      87,
+      1440,
+      233,
+      196
+    ],
+    "category_id": 0,
+    "area": 45668,
+    "point": [
+      203,
+      1538
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      315,
+      796,
+      254,
+      203
+    ],
+    "category_id": 0,
+    "area": 51562,
+    "point": [
+      442,
+      898
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      555,
+      772,
+      256,
+      221
+    ],
+    "category_id": 0,
+    "area": 56576,
+    "point": [
+      683,
+      882
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos5",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos5.jpg",
+    "bbox": [
+      804,
+      801,
+      261,
+      196
+    ],
+    "category_id": 0,
+    "area": 51156,
+    "point": [
+      934,
+      899
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      0,
+      187,
+      1152,
+      1546
+    ],
+    "category_id": 2,
+    "area": 1780992,
+    "point": [
+      584,
+      960
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      135,
+      233,
+      230,
+      191
+    ],
+    "category_id": 0,
+    "area": 43930,
+    "point": [
+      250,
+      328
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      347,
+      216,
+      234,
+      195
+    ],
+    "category_id": 0,
+    "area": 45630,
+    "point": [
+      464,
+      313
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      614,
+      209,
+      245,
+      178
+    ],
+    "category_id": 0,
+    "area": 43610,
+    "point": [
+      736,
+      298
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      840,
+      241,
+      242,
+      167
+    ],
+    "category_id": 0,
+    "area": 40414,
+    "point": [
+      961,
+      324
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      95,
+      425,
+      234,
+      180
+    ],
+    "category_id": 0,
+    "area": 42120,
+    "point": [
+      212,
+      515
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      324,
+      413,
+      246,
+      179
+    ],
+    "category_id": 0,
+    "area": 44034,
+    "point": [
+      447,
+      503
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      589,
+      408,
+      238,
+      182
+    ],
+    "category_id": 0,
+    "area": 43316,
+    "point": [
+      708,
+      499
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      862,
+      406,
+      246,
+      188
+    ],
+    "category_id": 0,
+    "area": 46248,
+    "point": [
+      985,
+      500
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      80,
+      610,
+      250,
+      182
+    ],
+    "category_id": 0,
+    "area": 45500,
+    "point": [
+      205,
+      701
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      338,
+      610,
+      231,
+      187
+    ],
+    "category_id": 0,
+    "area": 43197,
+    "point": [
+      454,
+      703
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      591,
+      588,
+      248,
+      196
+    ],
+    "category_id": 0,
+    "area": 48608,
+    "point": [
+      715,
+      686
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      841,
+      597,
+      250,
+      194
+    ],
+    "category_id": 0,
+    "area": 48500,
+    "point": [
+      966,
+      694
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      67,
+      813,
+      235,
+      187
+    ],
+    "category_id": 0,
+    "area": 43945,
+    "point": [
+      185,
+      907
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      337,
+      802,
+      259,
+      203
+    ],
+    "category_id": 0,
+    "area": 52577,
+    "point": [
+      466,
+      904
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      589,
+      796,
+      276,
+      208
+    ],
+    "category_id": 0,
+    "area": 57408,
+    "point": [
+      727,
+      900
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      849,
+      799,
+      249,
+      214
+    ],
+    "category_id": 0,
+    "area": 53286,
+    "point": [
+      974,
+      906
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      46,
+      1009,
+      248,
+      186
+    ],
+    "category_id": 0,
+    "area": 46128,
+    "point": [
+      170,
+      1102
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      325,
+      1017,
+      243,
+      204
+    ],
+    "category_id": 0,
+    "area": 49572,
+    "point": [
+      446,
+      1119
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      582,
+      1015,
+      254,
+      216
+    ],
+    "category_id": 0,
+    "area": 54864,
+    "point": [
+      709,
+      1123
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      861,
+      1022,
+      260,
+      205
+    ],
+    "category_id": 0,
+    "area": 53300,
+    "point": [
+      991,
+      1125
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      46,
+      1212,
+      267,
+      255
+    ],
+    "category_id": 0,
+    "area": 68085,
+    "point": [
+      179,
+      1340
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      304,
+      1210,
+      252,
+      223
+    ],
+    "category_id": 0,
+    "area": 56196,
+    "point": [
+      430,
+      1321
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      601,
+      1247,
+      257,
+      193
+    ],
+    "category_id": 0,
+    "area": 49601,
+    "point": [
+      730,
+      1344
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      853,
+      1224,
+      281,
+      226
+    ],
+    "category_id": 0,
+    "area": 63506,
+    "point": [
+      993,
+      1337
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      55,
+      1445,
+      248,
+      216
+    ],
+    "category_id": 0,
+    "area": 53568,
+    "point": [
+      179,
+      1553
+    ],
+    "label": 1
+  },
+  {
+    "image_id": "codigos7",
+    "image_path": "notebooks\\dataset\\yolo_format\\images\\val\\codigos7.jpg",
+    "bbox": [
+      308,
+      1445,
+      255,
+      223
+    ],
+    "category_id": 0,
+    "area": 56865,
+    "point": [
+      435,
+      1557
+    ],
+    "label": 1
+  }
+]

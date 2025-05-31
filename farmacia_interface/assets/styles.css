@@ -1,0 +1,39 @@
+/* assets/styles.css */
+/* Estilos básicos para FarmaScan */
+
+.main {
+    padding-top: 1rem;
+}
+
+.stButton > button {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.stButton > button:hover {
+    background-color: #45a049;
+}
+
+.metric-container {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #4CAF50;
+}
+
+/* Colores para tablas */
+.success-row {
+    background-color: #e8f5e8 !important;
+}
+
+.warning-row {
+    background-color: #fff3e0 !important;
+}
+
+.error-row {
+    background-color: #ffebee !important;
+}
