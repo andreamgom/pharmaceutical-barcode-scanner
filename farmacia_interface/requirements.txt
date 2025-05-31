@@ -24,3 +24,6 @@ pandas>=2.0.0
 pathlib
 python-multipart>=0.0.6
 matplotlib>=3.6.0
+
+
+
