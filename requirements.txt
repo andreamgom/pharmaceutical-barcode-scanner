@@ -1,36 +1,18 @@
-# YOLO Dependencies
-ultralytics>=8.0.0
-torch>=1.8.0
-torchvision>=0.9.0
-
-# Computer Vision & Image Processing
-opencv-python>=4.5.0
-Pillow>=8.0.0
-scikit-image>=0.18.0
-
-# Numerical Computing & Data Analysis
-numpy>=1.21.0
-pandas>=1.3.0
-matplotlib>=3.3.0
-seaborn>=0.11.0
-
-# Barcode Detection
-pyzbar>=0.1.9
-zxingcpp>=2.0.0
-
-# LLM APIs
-google-generativeai>=0.3.0
-streamlit>=1.28.0
-requests>=2.25.0
-
-# Machine Learning & Utilities
-scikit-learn>=1.0.0
-pathlib2>=2.3.0
-tqdm>=4.62.0
-
-# Jupyter Notebook Support
-jupyter>=1.0.0
-ipywidgets>=7.6.0
-
-# Optional but recommended
-python-dotenv>=0.19.0
+streamlit
+pandas
+numpy
+opencv-python-headless
+Pillow
+pyzbar
+requests
+pathlib
+ultralytics
+torch
+torchvision
+scikit-image
+matplotlib
+seaborn
+plotly
+fastapi
+uvicorn
+python-multipart
