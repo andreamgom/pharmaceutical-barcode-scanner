@@ -1,0 +1,75 @@
+name: Test Pharmaceutical Barcode Scanner
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths: [ 'farmacia_interface/**' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-interface:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libzbar0 libzbar-dev
+    
+    - name: Install Python dependencies
+      run: |
+        cd farmacia_interface
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Create minimal test secrets
+      run: |
+        cd farmacia_interface
+        mkdir -p .streamlit
+        echo '# Test secrets for CI' > .streamlit/secrets.toml
+    
+    - name: Test basic imports
+      run: |
+        cd farmacia_interface
+        python -c "
+        import sys
+        print('🔍 Testing basic imports...')
+        
+        try:
+            import streamlit as st
+            print('✅ Streamlit import OK')
+        except Exception as e:
+            print(f'❌ Streamlit error: {e}')
+            sys.exit(1)
+        
+        try:
+            import cv2
+            print('✅ OpenCV import OK')
+        except Exception as e:
+            print(f'❌ OpenCV error: {e}')
+            sys.exit(1)
+        
+        try:
+            import pandas as pd
+            print('✅ Pandas import OK')
+        except Exception as e:
+            print(f'❌ Pandas error: {e}')
+            sys.exit(1)
+        
+        print('🎉 Basic imports successful!')
+        "
+    
+    - name: Test app syntax
+      run: |
+        cd farmacia_interface
+        python -m py_compile streamlit_app.py
+        echo "✅ Streamlit app syntax is valid"
