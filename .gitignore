@@ -5,9 +5,9 @@
 .env.local
 .env.production
 
-# Datos y modelos
+# Datos y modelos (comentar runs/ para incluirlo)
 data/
-runs/
+# runs/  ← COMENTAR O ELIMINAR ESTA LÍNEA
 *.pt
 *.pth
 *.pkl
@@ -39,5 +39,5 @@ Thumbs.db
 # Jupyter
 .ipynb_checkpoints/
 
-# Streamlit
-farmacia_interface/.streamlit/config.toml
+# Streamlit (actualizar la ruta)
+farmcode_detector/.streamlit/config.toml
