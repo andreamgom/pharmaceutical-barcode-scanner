@@ -6,6 +6,7 @@ on:
     paths: [ 'farmcode_detector/**' ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:  # Para ejecutar manualmente
 
 jobs:
   test-interface:
@@ -27,17 +28,31 @@ jobs:
     
     - name: Install Python dependencies
       run: |
-        cd farmcode_detector             
+        cd farmcode_detector
         pip install --upgrade pip
         pip install -r requirements.txt
     
     - name: Create minimal test secrets
       run: |
-        cd farmcode_detector             
+        cd farmcode_detector
         mkdir -p .streamlit
         echo '# Test secrets for CI' > .streamlit/secrets.toml
     
+    - name: Test basic imports
+      run: |
+        cd farmcode_detector
+        python -c "
+        import streamlit as st
+        import torch
+        import torchvision
+        from ultralytics import YOLO
+        import cv2
+        from pyzbar import pyzbar
+        print('✅ Todas las importaciones funcionan')
+        "
+    
     - name: Test app syntax
       run: |
-        cd farmcode_detector             
+        cd farmcode_detector
         python -m py_compile streamlit_app.py
+        echo '✅ Sintaxis de la aplicación correcta'
