@@ -4,7 +4,7 @@ name: Deploy Pharmaceutical Barcode Scanner
 on:
   push:
     branches: [ main ]
-    paths: [ 'farmacia_interface/**' ]
+    paths: [ '**' ]  # Todos los archivos
   pull_request:
     branches: [ main ]
 
