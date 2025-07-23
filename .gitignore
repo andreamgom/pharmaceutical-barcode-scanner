@@ -1,0 +1,43 @@
+# Secrets y configuración sensible
+.streamlit/secrets.toml
+.env
+*.env
+.env.local
+.env.production
+
+# Datos y modelos
+data/
+runs/
+*.pt
+*.pth
+*.pkl
+
+# Cache y temporales
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.cache/
+.pytest_cache/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+farmacia_interface/.streamlit/config.toml
