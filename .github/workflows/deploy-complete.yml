@@ -3,7 +3,7 @@ name: Test & Deploy Pharmaceutical Barcode Scanner
 on:
   push:
     branches: [ main ]
-    paths: [ 'farmcode_detector/**' ]    # <- aquí
+    paths: [ 'farmcode_detector/**' ]
   pull_request:
     branches: [ main ]
 
