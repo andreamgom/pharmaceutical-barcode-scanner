@@ -24,57 +24,52 @@ IMPORTS_OK = True
 
 # Import de OpenCV con manejo de errores robusto
 try:
-    import cv2
-    # Verificar que OpenCV puede funcionar básicamente
-    test_array = np.zeros((100, 100, 3), dtype=np.uint8)
-    _ = cv2.cvtColor(test_array, cv2.COLOR_BGR2RGB)
-    CV2_AVAILABLE = True
-    st.success("✅ OpenCV funcionando correctamente")
+    # Test específico para ZBar antes de importar módulos
+    from pyzbar import pyzbar
+    ZBAR_AVAILABLE = True
+    st.success("✅ ZBar disponible")
 except Exception as e:
-    CV2_AVAILABLE = False
-    st.error(f"❌ Error con OpenCV: {e}")
-    
-    # Tu mensaje informativo actual (está perfecto)
-    st.warning("""
-    🔧 **Estado de la Aplicación**: Configurando dependencias del sistema
-    
-    La aplicación está en proceso de instalación de librerías gráficas necesarias.
-    Esto puede tomar unos minutos adicionales.
-    
-    **¿Qué está pasando?**
-    - Las dependencias de Python ✅ están instaladas
-    - Las librerías del sistema ⏳ se están configurando
-    - OpenCV requiere acceso a librerías gráficas específicas
-    
-    **Próximos pasos:**
-    1. Recarga la página en 2-3 minutos
-    2. Si el problema persiste, contacta al desarrollador
-    """)
-    
-    with st.expander("🔍 Información técnica del error"):
-        st.code(f"""
-Error específico: {str(e)}
-Dependencias instaladas: PyTorch ✅, Streamlit ✅, NumPy ✅
-Problema: Acceso a libGL.so.1 para OpenCV
-Estado: Configurando entorno del sistema...
+    if "Unable to find zbar shared library" in str(e):
+        st.error("❌ Configurando librerías de códigos de barras...")
+        st.warning("""
+        🔧 **Estado: Instalando Dependencias del Sistema**
+        
+        Las librerías necesarias para escanear códigos de barras se están configurando.
+        
+        **Progreso actual:**
+        - Python 3.11 ✅
+        - Dependencias Python ✅  
+        - OpenCV ⏳ (configurando libGL.so.1)
+        - ZBar ⏳ (configurando libzbar0)
+        
+        **Tiempo estimado:** 8-10 minutos
+        
+        Recarga la página en unos minutos para ver tu aplicación funcionando.
         """)
-    
-    st.stop()
+        
+        with st.expander("🔍 Detalles técnicos"):
+            st.code(f"""
+Error ZBar: {str(e)}
+Causa: libzbar0 y libzbar-dev no instalados
+Solución: Procesando packages.txt
+Estado: Configurando entorno del sistema
+            """)
+        
+        st.stop()
 
-# Importaciones de componentes después de verificar OpenCV
-try:
-    from components.sidebar import create_sidebar
-    from components.results_display import ResultsDisplay
-    from components.grid_editor import GridEditor
-    from components.session_manager import SessionManager
-    from core.orchestrator import Orchestrator
-    from utils.file_utils import save_uploaded_file, cleanup_temp_files
-    from components.cima_validator import CIMAValidator
-except ImportError as e:
-    st.error(f"Error importando módulos: {e}")
-    IMPORTS_OK = False
-
-# El resto de tu código permanece igual...
+# Solo después de verificar ZBar, importar tus módulos
+if ZBAR_AVAILABLE:
+    try:
+        from components.sidebar import create_sidebar
+        from components.results_display import ResultsDisplay
+        from components.grid_editor import GridEditor
+        from components.session_manager import SessionManager
+        from core.orchestrator import Orchestrator
+        from utils.file_utils import save_uploaded_file, cleanup_temp_files
+        from components.cima_validator import CIMAValidator
+    except ImportError as e:
+        st.error(f"Error importando módulos: {e}")
+        IMPORTS_OK = False
 
 
 def load_custom_css():
