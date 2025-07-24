@@ -1,16 +1,26 @@
-# streamlit_app.py
 import streamlit as st
 import pandas as pd
 from pathlib import Path
 import time
 from PIL import Image
-import cv2
 import numpy as np
 import os
+
+# CONFIGURACIÓN DE PÁGINA - DEBE SER LO PRIMERO
+st.set_page_config(
+    page_title="Sistema de Detección de Códigos Farmacéuticos",
+    page_icon="💊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
 # Configuración específica para OpenCV en entornos headless
 os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+
+# Variables globales
+CV2_AVAILABLE = False
+IMPORTS_OK = True
 
 # Import de OpenCV con manejo de errores robusto
 try:
@@ -24,7 +34,7 @@ except Exception as e:
     CV2_AVAILABLE = False
     st.error(f"❌ Error con OpenCV: {e}")
     
-    # Mensaje informativo para usuarios
+    # Tu mensaje informativo actual (está perfecto)
     st.warning("""
     🔧 **Estado de la Aplicación**: Configurando dependencias del sistema
     
@@ -41,7 +51,6 @@ except Exception as e:
     2. Si el problema persiste, contacta al desarrollador
     """)
     
-    # Mostrar información técnica en un expander
     with st.expander("🔍 Información técnica del error"):
         st.code(f"""
 Error específico: {str(e)}
@@ -52,14 +61,7 @@ Estado: Configurando entorno del sistema...
     
     st.stop()
 
-st.set_page_config(
-    page_title="Sistema de Detección de Códigos Farmacéuticos",
-    page_icon="💊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-IMPORTS_OK = True
+# Importaciones de componentes después de verificar OpenCV
 try:
     from components.sidebar import create_sidebar
     from components.results_display import ResultsDisplay
@@ -71,6 +73,9 @@ try:
 except ImportError as e:
     st.error(f"Error importando módulos: {e}")
     IMPORTS_OK = False
+
+# El resto de tu código permanece igual...
+
 
 def load_custom_css():
     """Aplica estilos CSS personalizados para la interfaz"""
