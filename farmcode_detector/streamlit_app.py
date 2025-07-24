@@ -10,7 +10,6 @@ import os
 
 # Configuración específica para OpenCV en entornos headless
 os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
-os.environ['OPENCV_VIDEOIO_DEBUG'] = '0'
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
 # Import de OpenCV con manejo de errores robusto
