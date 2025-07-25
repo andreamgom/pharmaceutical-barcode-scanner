@@ -47,19 +47,18 @@ Este enfoque híbrido (implementado en `farmcode_detector.py`) demostró ser sig
 
 ## Estructura del Repositorio
 
-pharmaceutical-barcode-scanner/
-├── README.md
-├── farmcode_detector/ # Aplicación web principal (sistema híbrido)
-│ ├── streamlit_app.py
-│ ├── requirements.txt
-│ ├── core/ # Lógica de detección, procesamiento y orquestación
-│ └── components/ # Módulos de la interfaz de Streamlit
-├── data/ # Resultados de los experimentos (CSV, JSON)
-├── datasets/ # Imágenes originales y anotaciones (YOLO, LabelMe)
-├── runs/ # Modelos YOLO entrenados
-├── sam2/ # Modelos y artefactos de SAM2
-└── pruebas/ # Scripts para ejecutar cada detector por separado
-
+-   `pharmaceutical-barcode-scanner/`
+    -   `README.md`
+    -   `farmcode_detector/`
+        -   `streamlit_app.py`
+        -   `requirements.txt`
+        -   `core/`
+        -   `components/`
+    -   `data/`
+    -   `datasets/`
+    -   `runs/`
+    -   `sam2/`
+    -   `pruebas/`
 
 ## Instalación
 
@@ -92,13 +91,6 @@ Para ejecutar la aplicación principal y los scripts de prueba, sigue estos paso
 5.  **Instalar dependencias de Python:**
     ```
     pip install -r farmcode_detector/requirements.txt
-    ```
-
-6.  **(Opcional) Configurar claves de API:**
-    Si deseas ejecutar las pruebas con los modelos de LLM (`gemini_detector.py`, `gpt4_detector.py`), necesitarás configurar tus claves de API como variables de entorno:
-    ```
-    export GOOGLE_API_KEY="tu_clave_de_gemini"
-    export OPENAI_API_KEY="tu_clave_de_openai"
     ```
 
 ## Uso
