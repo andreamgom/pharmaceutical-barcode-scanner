@@ -1,0 +1,156 @@
+{
+  "image_name": "codigos24.jpg",
+  "header_detected": false,
+  "grid_layout": {
+    "rows": 7,
+    "cols": 4
+  },
+  "max_codes": 26,
+  "valid_codes": 6,
+  "success_rate": 0.23076923076923078,
+  "decoding_stats": {
+    "pyzbar_original": 2,
+    "pyzbar_enhanced": 3,
+    "pyzbar_normalized": 0,
+    "pyzbar_binary": 0,
+    "pyzbar_inverted": 0,
+    "zxingcpp_original": 1,
+    "zxingcpp_enhanced": 0,
+    "zxingcpp_normalized": 0,
+    "zxingcpp_binary": 0,
+    "zxingcpp_inverted": 0,
+    "none": 20
+  },
+  "codes": {
+    "1": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.30066022276878357
+    },
+    "2": {
+      "code": "8470004893694",
+      "method": "pyzbar_original",
+      "confidence": 0.9361156225204468
+    },
+    "3": {
+      "code": "8470006981092",
+      "method": "pyzbar_original",
+      "confidence": 0.9474733471870422
+    },
+    "4": {
+      "code": "8470004730661",
+      "method": "zxingcpp_original",
+      "confidence": 0.9412270784378052
+    },
+    "5": {
+      "code": "8470007568742",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9471280574798584
+    },
+    "6": {
+      "code": "8470006514603",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9508070349693298
+    },
+    "7": {
+      "code": "8470007273592",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9374541640281677
+    },
+    "8": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "9": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "10": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "11": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "12": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "13": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "14": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "15": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "16": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "17": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "18": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "19": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "20": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "21": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "22": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "23": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "24": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "25": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "26": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    }
+  }
+}

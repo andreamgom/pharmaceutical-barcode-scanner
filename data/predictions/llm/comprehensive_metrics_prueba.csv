@@ -1,0 +1,7 @@
+image,detector,has_gt_grid,has_gt_simple,precision,recall,f1_score,correct_codes,false_positives,false_negatives
+codigos10,Gemini,False,True,95.45454545454545,95.45454545454545,95.45454545454545,21.0,1.0,1.0
+codigos10,GPT-4,False,True,33.33333333333333,27.27272727272727,30.0,6.0,12.0,16.0
+codigos11,Gemini,False,True,100.0,100.0,100.0,23.0,0.0,0.0
+codigos11,GPT-4,False,True,,,,,,
+codigos12,Gemini,False,True,95.83333333333334,95.83333333333334,95.83333333333334,23.0,1.0,1.0
+codigos12,GPT-4,False,True,10.714285714285714,12.5,11.538461538461538,3.0,25.0,21.0

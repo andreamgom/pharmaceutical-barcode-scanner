@@ -1,0 +1,25 @@
+Imagen,Detector,Éxito,Códigos Detectados,Tiempo (s),Header Detectado,Accuracy (%),GT Disponible
+codigos10,Gemini,False,0,3.921605110168457,False,,True
+codigos10,GPT-4V,False,0,0.8311080932617188,False,,True
+codigos11,Gemini,False,0,3.057140350341797,False,,True
+codigos11,GPT-4V,False,0,0.8447942733764648,False,,True
+codigos12,Gemini,False,0,2.8414883613586426,False,,True
+codigos12,GPT-4V,False,0,0.779273271560669,False,,True
+codigos14,Gemini,False,0,3.372791051864624,False,,True
+codigos14,GPT-4V,False,0,2.5862128734588623,False,,True
+codigos15,Gemini,False,0,2.8093059062957764,False,,True
+codigos15,GPT-4V,False,0,0.8468189239501953,False,,True
+codigos16,Gemini,False,0,3.576768159866333,False,,True
+codigos16,GPT-4V,False,0,0.9196460247039795,False,,True
+codigos17,Gemini,False,0,3.6012344360351562,False,,True
+codigos17,GPT-4V,False,0,0.7796831130981445,False,,True
+codigos18,Gemini,False,0,3.4251677989959717,False,,True
+codigos18,GPT-4V,False,0,2.2791860103607178,False,,True
+codigos23,Gemini,False,0,3.345853567123413,False,,True
+codigos23,GPT-4V,False,0,2.051295042037964,False,,True
+codigos24,Gemini,False,0,2.846325159072876,False,,True
+codigos24,GPT-4V,False,0,0.7069449424743652,False,,True
+codigos25,Gemini,False,0,4.105755567550659,False,,True
+codigos25,GPT-4V,False,0,0.806525707244873,False,,True
+codigos29,Gemini,False,0,3.945014476776123,False,,True
+codigos29,GPT-4V,False,0,0.8985059261322021,False,,True

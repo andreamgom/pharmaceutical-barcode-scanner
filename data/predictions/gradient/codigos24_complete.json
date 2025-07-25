@@ -1,0 +1,153 @@
+{
+  "image_name": "codigos24.jpg",
+  "header_detected": false,
+  "grid_layout": {
+    "rows": 6,
+    "cols": 4
+  },
+  "max_codes": 24,
+  "valid_codes": 4,
+  "success_rate": 0.16666666666666666,
+  "decoding_stats": {
+    "original": 2,
+    "contrast": 1,
+    "brightness_up": 1,
+    "brightness_down": 0,
+    "clahe": 0,
+    "gaussian_blur": 0,
+    "median_blur": 0,
+    "bilateral": 0,
+    "sharpen": 0,
+    "adaptive_thresh": 0,
+    "otsu_thresh": 0,
+    "morphology": 0,
+    "resize_2x": 0,
+    "resize_3x": 0,
+    "resize_4x": 0,
+    "resize_5x": 0,
+    "resize_6x": 0,
+    "none": 20
+  },
+  "codes": {
+    "1": {
+      "code": "8470004893694",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "2": {
+      "code": "8470006981092",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "3": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    },
+    "4": {
+      "code": "8410001562742",
+      "method": "brightness_up",
+      "confidence": 1.0
+    },
+    "5": {
+      "code": "8470007273592",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "6": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    },
+    "7": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    },
+    "8": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "9": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "10": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "11": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "12": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "13": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "14": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "15": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "16": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "17": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "18": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "19": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "20": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "21": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "22": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "23": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "24": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    }
+  }
+}

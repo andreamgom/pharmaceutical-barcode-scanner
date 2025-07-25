@@ -1,0 +1,156 @@
+{
+  "image_name": "codigos25.jpg",
+  "header_detected": false,
+  "grid_layout": {
+    "rows": 7,
+    "cols": 4
+  },
+  "max_codes": 26,
+  "valid_codes": 10,
+  "success_rate": 0.38461538461538464,
+  "decoding_stats": {
+    "pyzbar_original": 4,
+    "pyzbar_enhanced": 5,
+    "pyzbar_normalized": 0,
+    "pyzbar_binary": 0,
+    "pyzbar_inverted": 0,
+    "zxingcpp_original": 0,
+    "zxingcpp_enhanced": 1,
+    "zxingcpp_normalized": 0,
+    "zxingcpp_binary": 0,
+    "zxingcpp_inverted": 0,
+    "none": 16
+  },
+  "codes": {
+    "1": {
+      "code": "8470006651933",
+      "method": "zxingcpp_enhanced",
+      "confidence": 0.9336535334587097
+    },
+    "2": {
+      "code": "8470006982068",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9435229897499084
+    },
+    "3": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9528533220291138
+    },
+    "4": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.952173113822937
+    },
+    "5": {
+      "code": "8470008661039",
+      "method": "pyzbar_original",
+      "confidence": 0.9384614825248718
+    },
+    "6": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9429100751876831
+    },
+    "7": {
+      "code": "8470006986691",
+      "method": "pyzbar_original",
+      "confidence": 0.9432713985443115
+    },
+    "8": {
+      "code": "8470007187431",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.953926146030426
+    },
+    "9": {
+      "code": "8470007010074",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.948798656463623
+    },
+    "10": {
+      "code": "8470007104483",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9335958361625671
+    },
+    "11": {
+      "code": "8470006645741",
+      "method": "pyzbar_enhanced",
+      "confidence": 0.9414878487586975
+    },
+    "12": {
+      "code": "8470009936754",
+      "method": "pyzbar_original",
+      "confidence": 0.9474816918373108
+    },
+    "13": {
+      "code": "8470006640128",
+      "method": "pyzbar_original",
+      "confidence": 0.9422124624252319
+    },
+    "14": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "15": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "16": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "17": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "18": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "19": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "20": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "21": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "22": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "23": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "24": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "25": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "26": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    }
+  }
+}

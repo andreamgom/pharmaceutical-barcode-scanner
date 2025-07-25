@@ -1,0 +1,160 @@
+{
+  "total_images": 12,
+  "processed_at": "2025-05-30 14:09:18",
+  "results": [
+    {
+      "image": "codigos10",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 24,
+      "processing_time": 12.60685920715332
+    },
+    {
+      "image": "codigos10",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 0,
+      "processing_time": 6.06876802444458
+    },
+    {
+      "image": "codigos11",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 24,
+      "processing_time": 9.28568959236145
+    },
+    {
+      "image": "codigos11",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 0,
+      "processing_time": 6.369163990020752
+    },
+    {
+      "image": "codigos12",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 24,
+      "processing_time": 8.657678604125977
+    },
+    {
+      "image": "codigos12",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 20,
+      "processing_time": 5.984094142913818
+    },
+    {
+      "image": "codigos14",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 23,
+      "processing_time": 9.432018041610718
+    },
+    {
+      "image": "codigos14",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 0,
+      "processing_time": 6.531853914260864
+    },
+    {
+      "image": "codigos15",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 26,
+      "processing_time": 12.698075532913208
+    },
+    {
+      "image": "codigos15",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 28,
+      "processing_time": 5.735383987426758
+    },
+    {
+      "image": "codigos16",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 25,
+      "processing_time": 9.657830238342285
+    },
+    {
+      "image": "codigos16",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 0,
+      "processing_time": 6.653145790100098
+    },
+    {
+      "image": "codigos17",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 17,
+      "processing_time": 7.921915054321289
+    },
+    {
+      "image": "codigos17",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 0,
+      "processing_time": 5.498809337615967
+    },
+    {
+      "image": "codigos18",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 26,
+      "processing_time": 9.134559154510498
+    },
+    {
+      "image": "codigos18",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 28,
+      "processing_time": 5.899097681045532
+    },
+    {
+      "image": "codigos23",
+      "detector": "Gemini",
+      "success": true,
+      "codes_found": 26,
+      "processing_time": 9.482526063919067
+    },
+    {
+      "image": "codigos24",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 3,
+      "processing_time": 14.635441303253174
+    },
+    {
+      "image": "codigos25",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 13,
+      "processing_time": 14.566176414489746
+    },
+    {
+      "image": "codigos29",
+      "detector": "GPT-4",
+      "success": true,
+      "codes_found": 20,
+      "processing_time": 13.994477033615112
+    }
+  ],
+  "statistics": {
+    "gemini": {
+      "successful": 9,
+      "failed": 0,
+      "avg_codes": 23.88888888888889,
+      "avg_time": 9.875239054361979
+    },
+    "gpt4": {
+      "successful": 11,
+      "failed": 0,
+      "avg_codes": 10.181818181818182,
+      "avg_time": 8.357855601744218
+    }
+  }
+}

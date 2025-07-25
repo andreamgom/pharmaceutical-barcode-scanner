@@ -1,0 +1,153 @@
+{
+  "image_name": "codigos12.jpg",
+  "header_detected": false,
+  "grid_layout": {
+    "rows": 6,
+    "cols": 4
+  },
+  "max_codes": 24,
+  "valid_codes": 21,
+  "success_rate": 0.875,
+  "decoding_stats": {
+    "original": 4,
+    "contrast": 8,
+    "brightness_up": 0,
+    "brightness_down": 0,
+    "clahe": 4,
+    "gaussian_blur": 0,
+    "median_blur": 0,
+    "bilateral": 0,
+    "sharpen": 1,
+    "adaptive_thresh": 0,
+    "otsu_thresh": 0,
+    "morphology": 0,
+    "resize_2x": 3,
+    "resize_3x": 1,
+    "resize_4x": 0,
+    "resize_5x": 0,
+    "resize_6x": 0,
+    "none": 3
+  },
+  "codes": {
+    "1": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    },
+    "2": {
+      "code": "8470007020561",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "3": {
+      "code": "8470007235002",
+      "method": "clahe",
+      "confidence": 1.0
+    },
+    "4": {
+      "code": "8470006531136",
+      "method": "resize_3x",
+      "confidence": 1.0
+    },
+    "5": {
+      "code": "8470007260059",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "6": {
+      "code": "8470006595909",
+      "method": "resize_2x",
+      "confidence": 1.0
+    },
+    "7": {
+      "code": "8470006913017",
+      "method": "resize_2x",
+      "confidence": 1.0
+    },
+    "8": {
+      "code": "8470006594773",
+      "method": "clahe",
+      "confidence": 1.0
+    },
+    "9": {
+      "code": "8470006514603",
+      "method": "sharpen",
+      "confidence": 1.0
+    },
+    "10": {
+      "code": "8470007224358",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "11": {
+      "code": "8470006949788",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "12": {
+      "code": "8470006562116",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "13": {
+      "code": "8470007012184",
+      "method": "clahe",
+      "confidence": 1.0
+    },
+    "14": {
+      "code": "8470007423676",
+      "method": "original",
+      "confidence": 1.0
+    },
+    "15": {
+      "code": "8470006645741",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "16": {
+      "code": "8470007089414",
+      "method": "resize_2x",
+      "confidence": 1.0
+    },
+    "17": {
+      "code": "8470007307914",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "18": {
+      "code": "8470006917152",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "19": {
+      "code": "8470007237990",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "20": {
+      "code": "8410001135410",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "21": {
+      "code": "8470007013945",
+      "method": "contrast",
+      "confidence": 1.0
+    },
+    "22": {
+      "code": "8470008712854",
+      "method": "clahe",
+      "confidence": 1.0
+    },
+    "23": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    },
+    "24": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 1.0
+    }
+  }
+}

@@ -1,12 +1,12 @@
+# streamlit_app.py
 import streamlit as st
 import pandas as pd
 from pathlib import Path
 import time
 from PIL import Image
+import cv2
 import numpy as np
-import os
 
-# CONFIGURACIÓN DE PÁGINA - DEBE SER LO PRIMERO
 st.set_page_config(
     page_title="Sistema de Detección de Códigos Farmacéuticos",
     page_icon="💊",
@@ -14,63 +14,18 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Configuración específica para OpenCV en entornos headless
-os.environ['OPENCV_VIDEOIO_PRIORITY_MSMF'] = '0'
-os.environ['QT_QPA_PLATFORM'] = 'offscreen'
-
-# Variables globales
-CV2_AVAILABLE = False
 IMPORTS_OK = True
-
-# Import de OpenCV con manejo de errores robusto
 try:
-    # Test específico para ZBar antes de importar módulos
-    from pyzbar import pyzbar
-    ZBAR_AVAILABLE = True
-    st.success("✅ ZBar disponible")
-except Exception as e:
-    if "Unable to find zbar shared library" in str(e):
-        st.error("❌ Configurando librerías de códigos de barras...")
-        st.warning("""
-        🔧 **Estado: Instalando Dependencias del Sistema**
-        
-        Las librerías necesarias para escanear códigos de barras se están configurando.
-        
-        **Progreso actual:**
-        - Python 3.11 ✅
-        - Dependencias Python ✅  
-        - OpenCV ⏳ (configurando libGL.so.1)
-        - ZBar ⏳ (configurando libzbar0)
-        
-        **Tiempo estimado:** 8-10 minutos
-        
-        Recarga la página en unos minutos para ver tu aplicación funcionando.
-        """)
-        
-        with st.expander("🔍 Detalles técnicos"):
-            st.code(f"""
-Error ZBar: {str(e)}
-Causa: libzbar0 y libzbar-dev no instalados
-Solución: Procesando packages.txt
-Estado: Configurando entorno del sistema
-            """)
-        
-        st.stop()
-
-# Solo después de verificar ZBar, importar tus módulos
-if ZBAR_AVAILABLE:
-    try:
-        from components.sidebar import create_sidebar
-        from components.results_display import ResultsDisplay
-        from components.grid_editor import GridEditor
-        from components.session_manager import SessionManager
-        from core.orchestrator import Orchestrator
-        from utils.file_utils import save_uploaded_file, cleanup_temp_files
-        from components.cima_validator import CIMAValidator
-    except ImportError as e:
-        st.error(f"Error importando módulos: {e}")
-        IMPORTS_OK = False
-
+    from components.sidebar import create_sidebar
+    from components.results_display import ResultsDisplay
+    from components.grid_editor import GridEditor
+    from components.session_manager import SessionManager
+    from core.orchestrator import Orchestrator
+    from utils.file_utils import save_uploaded_file, cleanup_temp_files
+    from components.cima_validator import CIMAValidator
+except ImportError as e:
+    st.error(f"Error importando módulos: {e}")
+    IMPORTS_OK = False
 
 def load_custom_css():
     """Aplica estilos CSS personalizados para la interfaz"""

@@ -5,8 +5,6 @@
 .env.local
 .env.production
 
-# Datos y modelos (comentar runs/ para incluirlo)
-data/
 # runs/  ← COMENTAR O ELIMINAR ESTA LÍNEA
 *.pt
 *.pth

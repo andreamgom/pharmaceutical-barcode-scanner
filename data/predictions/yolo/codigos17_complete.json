@@ -1,0 +1,156 @@
+{
+  "image_name": "codigos17.jpg",
+  "header_detected": false,
+  "grid_layout": {
+    "rows": 7,
+    "cols": 4
+  },
+  "max_codes": 26,
+  "valid_codes": 9,
+  "success_rate": 0.34615384615384615,
+  "decoding_stats": {
+    "pyzbar_original": 5,
+    "pyzbar_enhanced": 0,
+    "pyzbar_normalized": 0,
+    "pyzbar_binary": 0,
+    "pyzbar_inverted": 0,
+    "zxingcpp_original": 0,
+    "zxingcpp_enhanced": 4,
+    "zxingcpp_normalized": 0,
+    "zxingcpp_binary": 0,
+    "zxingcpp_inverted": 0,
+    "none": 17
+  },
+  "codes": {
+    "1": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9571355581283569
+    },
+    "2": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9493322968482971
+    },
+    "3": {
+      "code": "8470007064145",
+      "method": "zxingcpp_enhanced",
+      "confidence": 0.957097053527832
+    },
+    "4": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9549307227134705
+    },
+    "5": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9538745880126953
+    },
+    "6": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.949877142906189
+    },
+    "7": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9391618967056274
+    },
+    "8": {
+      "code": "8470007273042",
+      "method": "zxingcpp_enhanced",
+      "confidence": 0.9493101835250854
+    },
+    "9": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.952020525932312
+    },
+    "10": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.9496141076087952
+    },
+    "11": {
+      "code": "8470007260059",
+      "method": "pyzbar_original",
+      "confidence": 0.9446256160736084
+    },
+    "12": {
+      "code": "8470007161585",
+      "method": "zxingcpp_enhanced",
+      "confidence": 0.9521639347076416
+    },
+    "13": {
+      "code": "8470007310105",
+      "method": "zxingcpp_enhanced",
+      "confidence": 0.9544895887374878
+    },
+    "14": {
+      "code": "8470006780862",
+      "method": "pyzbar_original",
+      "confidence": 0.9515092968940735
+    },
+    "15": {
+      "code": "8470006917145",
+      "method": "pyzbar_original",
+      "confidence": 0.9422760605812073
+    },
+    "16": {
+      "code": "8470006960608",
+      "method": "pyzbar_original",
+      "confidence": 0.941954493522644
+    },
+    "17": {
+      "code": "8470007018605",
+      "method": "pyzbar_original",
+      "confidence": 0.9532259106636047
+    },
+    "18": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "19": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "20": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "21": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "22": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "23": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "24": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "25": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    },
+    "26": {
+      "code": "No detectado",
+      "method": "none",
+      "confidence": 0.0
+    }
+  }
+}
