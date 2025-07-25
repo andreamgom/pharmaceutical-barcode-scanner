@@ -100,10 +100,15 @@ Para ejecutar la aplicación principal y los scripts de prueba, sigue estos paso
 
 La aplicación principal implementa el sistema híbrido y ofrece una interfaz gráfica completa.
 
+<<<<<<< HEAD
 ```
     cd farmcode_detector/
     python -m streamlit run streamlit_app.py
 ```
+=======
+cd farmcode_detector/
+python -m streamlit run streamlit_app.py
+>>>>>>> 0ef754e76b2b6a759a1c63f721d2a7ca22fe1fb8
 
 
 Navega a la URL local que se muestra en la terminal (normalmente `http://localhost:8501`) para empezar a procesar imágenes de cupones.
