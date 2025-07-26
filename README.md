@@ -100,16 +100,11 @@ Para ejecutar la aplicación principal y los scripts de prueba, sigue estos paso
 
 La aplicación principal implementa el sistema híbrido y ofrece una interfaz gráfica completa.
 
-<<<<<<< HEAD
-```
+    ```
     cd farmcode_detector/
     python -m streamlit run streamlit_app.py
-```
-=======
-cd farmcode_detector/
-python -m streamlit run streamlit_app.py
->>>>>>> 0ef754e76b2b6a759a1c63f721d2a7ca22fe1fb8
 
+    ```
 
 Navega a la URL local que se muestra en la terminal (normalmente `http://localhost:8501`) para empezar a procesar imágenes de cupones.
 
@@ -119,7 +114,7 @@ La aplicación web guía al usuario a través de un flujo intuitivo de tres secc
 
 #### 1. Carga y Validación de Imágenes
 
-![Interfaz de Carga](dataset/readme/interfaz_carga.jpg)
+![Interfaz de Carga](dataset/readme/subir_imagenes.jpeg)
 *Figura 1: Sección de carga con interfaz drag-and-drop y validación automática*
 
 **Características principales:**
@@ -136,7 +131,7 @@ La aplicación web guía al usuario a través de un flujo intuitivo de tres secc
 
 #### 2. Visualización y Edición de Resultados
 
-![Interfaz de Resultados](dataset/readme/interfaz_resultados.jpg)  
+![Interfaz de Resultados](dataset/readme/resultados1.jpeg)  
 *Figura 2: Panel principal con visualización de detecciones y editor interactivo*
 
 **Panel de visualización:**
@@ -153,7 +148,7 @@ La aplicación web guía al usuario a través de un flujo intuitivo de tres secc
 
 #### 3. Validación Regulatoria con CIMA
 
-![Validación CIMA](dataset/readme/interfaz_validacion.jpg)
+![Validación CIMA](dataset/readme/validacion_cima.jpeg)
 *Figura 3: Integración con base de datos oficial CIMA para verificación regulatoria*
 
 **Funcionalidades de validación:**
