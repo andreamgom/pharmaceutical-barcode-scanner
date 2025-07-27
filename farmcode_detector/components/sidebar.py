@@ -4,7 +4,7 @@ import streamlit as st
 from pathlib import Path
 
 def create_sidebar():
-    """Sidebar simplificada sin opciones confusas"""
+    """Sidebar simplificada"""
     st.sidebar.title("Configuración")
 
     # Solo información, no opciones
@@ -20,7 +20,7 @@ def create_sidebar():
         st.sidebar.success("Modelo YOLO: Disponible")
     else:
         st.sidebar.error("Modelo YOLO: No encontrado")
-        yolo_model = "yolov8n.pt"  # Fallback
+        yolo_model = "yolov10.pt"
 
     # Configuración de validación
     st.sidebar.header("Validación CIMA")
@@ -42,5 +42,5 @@ def create_sidebar():
         'yolo_model': yolo_model,
         'use_gradient': True,
         'validate_with_cima': validate_with_cima,
-        'debug_mode': True  # ← ÚNICO CAMBIO: True en lugar de False
+        'debug_mode': True
     }

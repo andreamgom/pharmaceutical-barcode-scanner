@@ -1,4 +1,4 @@
-# core/detectors/header_detector.py - ULTRA SIMPLE
+# core/detectors/header_detector.py
 import cv2
 import numpy as np
 from pathlib import Path
@@ -28,7 +28,7 @@ class HeaderDetector:
         self.model = YOLO(model_path)
     
     def detect_header(self, image):
-        """Detección ULTRA simple - solo YOLO con alta confianza"""
+        """Detección solo YOLO con alta confianza"""
         # Solo YOLO con confianza MUY alta
         results = self.model(image, conf=0.87, verbose=False)
         

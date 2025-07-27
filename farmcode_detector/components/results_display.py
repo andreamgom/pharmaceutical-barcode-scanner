@@ -16,7 +16,6 @@ class ResultsDisplay:
             st.info("📭 No hay resultados para mostrar")
             return
         
-        # Layout principal
         col1, col2 = st.columns([2.5, 1.5])
         
         with col1:
@@ -29,7 +28,6 @@ class ResultsDisplay:
         """Muestra la región recortada CORREGIDA"""
         st.subheader("🎯 Región de Códigos Detectada")
         
-        # BUSCAR IMAGEN EN MÚLTIPLES UBICACIONES
         barcode_image = None
         image_source = "No encontrada"
         
@@ -119,11 +117,9 @@ class ResultsDisplay:
             return Image.fromarray(image_rgb)
         
         elif isinstance(image, Image.Image):
-            # Ya es PIL Image
             return image
         
         else:
-            # Intentar convertir
             return Image.fromarray(np.array(image))
     
     def _show_crop_info(self, results_data, barcode_image):

@@ -38,7 +38,7 @@ class GridPositionCorrector:
             print(f"   Detecciones válidas con bbox: {len(valid_detections)}")
             print(f"   Total posiciones esperadas: {total_positions}")
         
-        # 🆕 DECIDIR MÉTODO BASADO EN PORCENTAJE DE DETECCIÓN
+        # DECIDIR MÉTODO BASADO EN PORCENTAJE DE DETECCIÓN
         detection_ratio = len(valid_detections) / total_positions
         
         if detection_ratio < 0.5 and cropped_image is not None:
@@ -66,7 +66,7 @@ class GridPositionCorrector:
     
     def _generate_static_grid_adjusted(self, cropped_image, grid_shape, image_shape):
         """
-        🆕 Genera cuadrícula estática ajustada a las líneas visibles de la hoja
+        Genera cuadrícula estática ajustada a las líneas visibles de la hoja
         """
         rows, cols = grid_shape
         h, w = image_shape[:2]
@@ -270,7 +270,7 @@ class GridPositionCorrector:
         
         return grid
     
-    # 📋 MANTENER TODOS LOS MÉTODOS EXISTENTES SIN CAMBIOS
+    # MANTENER TODOS LOS MÉTODOS EXISTENTES SIN CAMBIOS
     def _generate_virtual_grid(self, valid_detections, grid_shape, image_shape):
         """
         Genera cuadrícula virtual basada en análisis espacial de códigos detectados
@@ -359,7 +359,7 @@ class GridPositionCorrector:
     
     def _interpolate_y_position(self, row_idx, y_centers, image_height):
         """
-        Interpola posición Y para filas no detectadas - VERSIÓN MEJORADA
+        Interpola posición Y para filas no detectadas
         """
         if len(y_centers) >= 2:
             # Detectar si los códigos están en la parte inferior
@@ -418,7 +418,7 @@ class GridPositionCorrector:
         mapped_results = {}
         used_positions = set()
 
-        # 🆕 DEFINIR POSICIONES VÁLIDAS SEGÚN EL LAYOUT
+        # DEFINIR POSICIONES VÁLIDAS SEGÚN EL LAYOUT
         if total_positions == 24:  # Con header
             valid_positions = set(range(1, 25))  # Posiciones 1-24
         elif total_positions == 26:  # Sin header

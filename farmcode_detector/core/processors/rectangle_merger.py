@@ -1,4 +1,4 @@
-# core/processors/layout/rectangle_merger.py - VERSIÓN COMPLETA CON MAPEO A CUADRÍCULA VIRTUAL
+# core/processors/layout/rectangle_merger.py
 
 import cv2
 import numpy as np
@@ -213,8 +213,6 @@ class RectangleMerger:
         """Redistribuye códigos en una fila para optimizar posicionamiento"""
         row_start = row * cols
         
-        # Por ahora, implementación simple: no redistribuir
-        # En el futuro se puede implementar lógica más sofisticada
         if self.debug:
             print(f"    Redistribución en fila {row+1}: manteniendo posiciones actuales")
     

@@ -12,12 +12,11 @@ class GridEditor:
     def __init__(self):
         self.session_key = "grid_data"
         self.selected_position_key = "selected_position"
-        self.current_image_key = "current_image_for_grid"  # Track imagen actual
+        self.current_image_key = "current_image_for_grid" 
     
     def create_simple_editor(self, results: Dict[str, Any]) -> pd.DataFrame:
         """Editor que se ajusta dinámicamente al layout (con/sin header)"""
         
-        # 🆕 DETECTAR LAYOUT BASADO EN MAX_CODES
         max_codes = results.get('max_codes', 26)
         
         if max_codes == 24:  # Termina en /24 = con header
@@ -48,7 +47,6 @@ class GridEditor:
         if self.selected_position_key not in st.session_state:
             st.session_state[self.selected_position_key] = 1
         
-        # 🆕 MOSTRAR INFORMACIÓN DEL LAYOUT CON COLORES
         if header_detected:
             st.markdown(
                 '<div class="grid-header-with">📋 Grid 6×4 (con header)</div>', 
@@ -62,7 +60,6 @@ class GridEditor:
             )
             st.caption("Formulario sin encabezado - 26 posiciones máximas")
         
-        # 🆕 TABLA EDITABLE CON COLORES INTEGRADOS
         table_height = min(400, (rows * 45) + 100)  # Más altura para colores
         
         edited_df = st.data_editor(
@@ -75,24 +72,21 @@ class GridEditor:
                     f"C{i+1}",
                     help=f"Códigos columna {i+1}",
                     max_chars=13,
-                    validate="^[0-9-]*$"  # 🆕 Permitir guiones
+                    validate="^[0-9-]*$"  
                 ) for i in range(cols)
             },
             key=f"codes_editor_{current_image_id}_{rows}_{cols}"
-            # 🆕 COLORES DIRECTAMENTE EN EL DATA_EDITOR
-            #hide_index=True,
         )
         
         st.session_state[self.session_key] = edited_df
         
         
-        # CONTROLES
         self._render_simple_controls(rows, cols, max_codes, results)
         
         return edited_df
     
     def _create_initial_grid_data(self, results: Dict[str, Any], rows: int, cols: int, max_codes: int) -> pd.DataFrame:
-        """🆕 Crea datos iniciales con guiones y preparación para colores"""
+        """Crea datos iniciales con guiones y preparación para colores"""
         grid_data = []
         
         for row in range(rows):
@@ -104,13 +98,13 @@ class GridEditor:
                     if position in results.get('decoded_results', {}):
                         code = results['decoded_results'][position]['code']
                         if code == "No detectado":
-                            row_data[f'Col_{col+1}'] = "-"  # 🆕 GUIÓN EN VEZ DE TEXTO
+                            row_data[f'Col_{col+1}'] = "-" 
                         else:
-                            row_data[f'Col_{col+1}'] = code  # CÓDIGO REAL
+                            row_data[f'Col_{col+1}'] = code
                     else:
-                        row_data[f'Col_{col+1}'] = "-"  # 🆕 GUIÓN POR DEFECTO
+                        row_data[f'Col_{col+1}'] = "-"
                 else:
-                    row_data[f'Col_{col+1}'] = "-"  # 🆕 GUIÓN PARA POSICIONES INVÁLIDAS
+                    row_data[f'Col_{col+1}'] = "-"
             
             grid_data.append(row_data)
         
@@ -118,7 +112,7 @@ class GridEditor:
     
     
     def _render_simple_controls(self, rows: int, cols: int, max_codes: int, results: Dict[str, Any]):
-        """🆕 Controles mejorados con información del layout detectado automáticamente"""
+        """Controles mejorados con información del layout detectado automáticamente"""
         
         st.markdown("---")
         
@@ -154,7 +148,6 @@ class GridEditor:
         else:
             current_code = "Fuera de rango"
         
-        # 🆕 Mostrar info con colores según el contenido
         if current_code != "-" and current_code != "Fuera de rango":
             st.success(f"**Posición {selected_position}:** Fila {row_num}, Columna {col_num} - ✅ `{current_code}`")
         else:
@@ -220,7 +213,7 @@ class GridEditor:
             for c in range(start_col, cols):
                 values_to_shift.append(st.session_state[self.session_key].iloc[r, c])
         
-        values_to_shift.insert(0, "-")  # 🆕 GUIÓN EN VEZ DE TEXTO
+        values_to_shift.insert(0, "-")
         values_to_shift = values_to_shift[:-1]
         
         value_idx = 0
@@ -248,7 +241,7 @@ class GridEditor:
         
         if values_to_shift:
             values_to_shift = values_to_shift[:-1]
-            values_to_shift.append("-")  # 🆕 GUIÓN EN VEZ DE TEXTO
+            values_to_shift.append("-") 
         
         value_idx = 0
         for r in range(0, row_idx + 1):
@@ -262,7 +255,7 @@ class GridEditor:
         st.rerun()
     
     def apply_changes(self, original_results: Dict[str, Any]):
-        """🆕 Aplica cambios considerando guiones como "No detectado" """
+        """Aplica cambios considerando guiones como "No detectado" """
         # Detectar layout automáticamente
         max_codes = original_results.get('max_codes', 26)
         if max_codes == 24:
@@ -281,7 +274,7 @@ class GridEditor:
                 if position <= original_results['max_codes']:
                     new_code = st.session_state[self.session_key].iloc[row_idx, col_idx]
                     
-                    if new_code and new_code.strip() and new_code != "-":  # 🆕 GUIÓN = NO DETECTADO
+                    if new_code and new_code.strip() and new_code != "-":
                         clean_code = new_code.strip()
                         if clean_code.isdigit() and len(clean_code) == 13:
                             updated_results['decoded_results'][position] = {
@@ -316,7 +309,7 @@ class GridEditor:
                 session_manager = SessionManager()
                 session_manager.update_image_results(st.session_state.current_image_id, updated_results)
         except:
-            pass  # Si no existe SessionManager, continuar
+            pass
         
         st.success("✅ Cambios aplicados correctamente!")
         st.rerun()
@@ -329,12 +322,12 @@ class GridEditor:
         st.rerun()
     
     def _prepare_json_download(self, df_grid: pd.DataFrame, results: Dict[str, Any]) -> str:
-        """🆕 Prepara JSON considerando guiones"""
+        """Prepara JSON considerando guiones"""
         codes_list = []
         for _, row in df_grid.iterrows():
             for col in df_grid.columns:
                 code = row[col]
-                if code and code.strip() and code != "-":  # 🆕 GUIÓN = NO ENCONTRADO
+                if code and code.strip() and code != "-": 
                     codes_list.append(code.strip())
                 else:
                     codes_list.append("No encontrado")
@@ -370,12 +363,12 @@ class GridEditor:
         return json.dumps(data, indent=2)
     
     def _prepare_csv_download(self, df_grid: pd.DataFrame) -> str:
-        """🆕 Prepara CSV considerando guiones"""
+        """Prepara CSV considerando guiones"""
         codes_list = []
         for _, row in df_grid.iterrows():
             for col in df_grid.columns:
                 code = row[col]
-                if code and code.strip() and code != "-":  # 🆕 GUIÓN = NO ENCONTRADO
+                if code and code.strip() and code != "-":
                     codes_list.append(code.strip())
                 else:
                     codes_list.append("No encontrado")
@@ -388,7 +381,7 @@ class GridEditor:
         return df_download.to_csv(index=False)
     
     def get_grid_statistics(self) -> Dict[str, Any]:
-        """🆕 Estadísticas considerando guiones"""
+        """Estadísticas considerando guiones"""
         if self.session_key not in st.session_state:
             return {}
         
@@ -396,7 +389,7 @@ class GridEditor:
         total_positions = df_grid.size
         filled_positions = sum(1 for _, row in df_grid.iterrows() 
                               for col in df_grid.columns 
-                              if row[col] and row[col].strip() and row[col] != "-")  # 🆕 GUIÓN = VACÍO
+                              if row[col] and row[col].strip() and row[col] != "-")
         
         return {
             'total_positions': total_positions,
@@ -415,13 +408,13 @@ class GridEditor:
                 del st.session_state[key]
     
     def validate_grid_data(self, df_grid: pd.DataFrame) -> Dict[str, Any]:
-        """🆕 Valida datos considerando guiones"""
+        """Valida datos considerando guiones"""
         errors = []
         warnings = []
         
         for row_idx, row in df_grid.iterrows():
             for col_idx, value in enumerate(row):
-                if value and value.strip() and value != "-":  # 🆕 IGNORA GUIONES EN VALIDACIÓN
+                if value and value.strip() and value != "-":
                     code = value.strip()
                     position = row_idx * len(df_grid.columns) + col_idx + 1
                     

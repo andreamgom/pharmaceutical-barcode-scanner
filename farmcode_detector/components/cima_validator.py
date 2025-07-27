@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 class CIMAValidator:
-    """Validador robusto para códigos farmacéuticos usando API CIMA"""
+    """Validador para códigos farmacéuticos usando API CIMA"""
     
     def __init__(self, rate_limit: float = 0.5, debug: bool = False):
         self.base_url = "https://cima.aemps.es/cima/rest/"

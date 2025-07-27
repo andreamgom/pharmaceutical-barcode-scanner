@@ -13,12 +13,12 @@ class BarcodeDecoder:
         self.debug = debug
         self.preprocessor = None
         
-        # 🆕 PREFIJOS FARMACÉUTICOS ESPAÑOLES VÁLIDOS
+        # PREFIJOS FARMACÉUTICOS ESPAÑOLES VÁLIDOS
         self.spanish_pharma_prefixes = [
             '840', '841', '842', '843', '844', '845', '846', '847', '848', '849'
         ]
         
-        # 🆕 PATRONES SOSPECHOSOS A RECHAZAR
+        # PATRONES SOSPECHOSOS A RECHAZAR
         self.suspicious_patterns = [
             r'^0{4,}',          # 4 o más ceros consecutivos al inicio
             r'0{6,}',           # 6 o más ceros consecutivos en cualquier lugar
@@ -29,7 +29,7 @@ class BarcodeDecoder:
             r'987654321',       # Secuencia descendente obvia
         ]
         
-        # 🆕 ESTADÍSTICAS DE RECHAZO
+        # ESTADÍSTICAS DE RECHAZO
         self.rejection_stats = {
             'wrong_prefix': 0,
             'invalid_ean13': 0,
@@ -47,7 +47,7 @@ class BarcodeDecoder:
             print(f"✅ Preprocessor inyectado: {self.preprocessor is not None}")
     
     def _is_valid_spanish_pharma_code(self, code):
-        """🆕 VALIDACIÓN ESTRICTA DE CÓDIGOS FARMACÉUTICOS ESPAÑOLES"""
+        """VALIDACIÓN ESTRICTA DE CÓDIGOS FARMACÉUTICOS ESPAÑOLES"""
         if not code or not isinstance(code, str):
             return False, "Código vacío o inválido"
         
@@ -82,11 +82,11 @@ class BarcodeDecoder:
                 self.rejection_stats['suspicious_pattern'] += 1
                 return False, f"Patrón sospechoso detectado ({pattern}): '{code}'"
         
-        # ✅ Código válido
+        # Código válido
         return True, f"Código farmacéutico español válido: '{code}'"
     
     def _validate_ean13_structure(self, code):
-        """🆕 VALIDACIÓN ESTRICTA DE EAN-13 CON DÍGITO DE CONTROL"""
+        """VALIDACIÓN ESTRICTA DE EAN-13 CON DÍGITO DE CONTROL"""
         if len(code) != 13 or not code.isdigit():
             return False
         
@@ -100,7 +100,7 @@ class BarcodeDecoder:
         return check_digit == int(code[12])
     
     def _attempt_code_correction(self, code):
-        """🆕 CORRECCIÓN INTELIGENTE DE ERRORES COMUNES"""
+        """CORRECCIÓN INTELIGENTE DE ERRORES COMUNES"""
         original_code = code
         corrections_applied = []
         
@@ -157,7 +157,7 @@ class BarcodeDecoder:
         return code, corrections_applied
     
     def _calculate_ean13_check_digit(self, base_code):
-        """🆕 CALCULA EL DÍGITO DE CONTROL EAN-13 CORRECTO"""
+        """CALCULA EL DÍGITO DE CONTROL EAN-13 CORRECTO"""
         if len(base_code) != 12:
             return None
         
@@ -168,7 +168,7 @@ class BarcodeDecoder:
         return check_digit
     
     def _process_detected_code(self, raw_code, technique_name):
-        """🆕 PROCESAMIENTO COMPLETO CON FILTRADO Y CORRECCIÓN"""
+        """PROCESAMIENTO COMPLETO CON FILTRADO Y CORRECCIÓN"""
         if not raw_code:
             return None
         
@@ -347,7 +347,7 @@ class BarcodeDecoder:
                 code_value, method = self.decode_barcode_hybrid(roi)
             
             if code_value != "No detectado":
-                # 🆕 VALIDACIÓN FINAL DEL CÓDIGO DETECTADO
+                # VALIDACIÓN FINAL DEL CÓDIGO DETECTADO
                 is_valid, reason = self._is_valid_spanish_pharma_code(code_value)
                 
                 if is_valid:
@@ -375,7 +375,7 @@ class BarcodeDecoder:
         }
     
     def decode_grid_complete(self, original_image, detection_result, max_codes):
-        """🆕 MÉTODO PRINCIPAL CON FILTRADO FARMACÉUTICO ESTRICTO"""
+        """MÉTODO PRINCIPAL CON FILTRADO FARMACÉUTICO ESTRICTO"""
         
         decoded_results = {}
         decoding_stats = {
@@ -390,7 +390,7 @@ class BarcodeDecoder:
             "none": 0
         }
         
-        # 🆕 REINICIAR ESTADÍSTICAS DE RECHAZO
+        # REINICIAR ESTADÍSTICAS DE RECHAZO
         self.rejection_stats = {key: 0 for key in self.rejection_stats.keys()}
         
         if self.debug:
@@ -471,7 +471,7 @@ class BarcodeDecoder:
             print(f"   🔍 Éxitos por expansión: {expansion_successes}")
             print(f"   ❌ Fallos de expansión: {expansion_failures}")
             
-            # 🆕 MOSTRAR ESTADÍSTICAS DE FILTRADO
+            # MOSTRAR ESTADÍSTICAS DE FILTRADO
             print(f"   🚫 ESTADÍSTICAS DE FILTRADO:")
             print(f"      Prefijo incorrecto: {self.rejection_stats['wrong_prefix']}")
             print(f"      EAN-13 inválido: {self.rejection_stats['invalid_ean13']}")
@@ -487,7 +487,7 @@ class BarcodeDecoder:
         return decoded_results, decoding_stats
     
     def decode_barcode_region(self, roi):
-        """🆕 MÉTODO PRINCIPAL CON FILTRADO FARMACÉUTICO"""
+        """MÉTODO PRINCIPAL CON FILTRADO FARMACÉUTICO"""
         if len(roi.shape) == 3:
             roi_gray = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
         else:
@@ -510,7 +510,7 @@ class BarcodeDecoder:
         return self.decode_barcode_region(roi)
     
     def decode_with_preprocessing(self, roi_gray):
-        """🆕 DECODIFICA CON PREPROCESAMIENTO Y FILTRADO FARMACÉUTICO"""
+        """DECODIFICA CON PREPROCESAMIENTO Y FILTRADO FARMACÉUTICO"""
         if not self.preprocessor:
             if self.debug:
                 print("⚠️ No hay preprocessor disponible, usando técnicas básicas")
@@ -548,7 +548,7 @@ class BarcodeDecoder:
             return self._decode_with_basic_techniques(roi_gray)
     
     def _try_pyzbar_with_filtering(self, processed_image, technique_name):
-        """🆕 PYZBAR CON FILTRADO FARMACÉUTICO ESTRICTO"""
+        """PYZBAR CON FILTRADO FARMACÉUTICO ESTRICTO"""
         try:
             decoded_objects = pyzbar.decode(processed_image, symbols=[
                 pyzbar.ZBarSymbol.EAN13,
@@ -560,7 +560,7 @@ class BarcodeDecoder:
             if decoded_objects:
                 raw_code = decoded_objects[0].data.decode('utf-8')
                 
-                # 🆕 PROCESAR CON FILTRADO FARMACÉUTICO
+                # PROCESAR CON FILTRADO FARMACÉUTICO
                 processed_result = self._process_detected_code(raw_code, technique_name)
                 
                 if processed_result:
@@ -582,7 +582,7 @@ class BarcodeDecoder:
         return None
     
     def _decode_with_basic_techniques(self, roi_gray):
-        """🆕 TÉCNICAS BÁSICAS CON FILTRADO FARMACÉUTICO"""
+        """TÉCNICAS BÁSICAS CON FILTRADO FARMACÉUTICO"""
         if self.debug:
             print("    🔧 Usando técnicas básicas con filtrado farmacéutico")
         
@@ -607,7 +607,7 @@ class BarcodeDecoder:
         return results
     
     def _select_best_result_with_filtering(self, preprocessing_results):
-        """🆕 SELECCIONA EL MEJOR RESULTADO CON FILTRADO FARMACÉUTICO"""
+        """SELECCIONA EL MEJOR RESULTADO CON FILTRADO FARMACÉUTICO"""
         all_codes = []
         
         # Recopilar todos los códigos válidos farmacéuticamente
@@ -630,7 +630,7 @@ class BarcodeDecoder:
         return self._apply_pharma_selection_strategy(all_codes)
     
     def _apply_pharma_selection_strategy(self, all_codes):
-        """🆕 ESTRATEGIA DE SELECCIÓN ESPECÍFICA PARA CÓDIGOS FARMACÉUTICOS"""
+        """ESTRATEGIA DE SELECCIÓN ESPECÍFICA PARA CÓDIGOS FARMACÉUTICOS"""
         
         # Estrategia 1: Priorizar códigos EAN-13 farmacéuticos españoles
         ean13_pharma_codes = [
@@ -658,7 +658,7 @@ class BarcodeDecoder:
         return "No detectado", "none"
     
     def get_rejection_report(self):
-        """🆕 OBTIENE REPORTE DETALLADO DE RECHAZOS"""
+        """OBTIENE REPORTE DETALLADO DE RECHAZOS"""
         total_processed = sum(self.rejection_stats.values())
         
         report = {
@@ -675,7 +675,7 @@ class BarcodeDecoder:
         return self._validate_ean13_structure(code)
     
     def apply_spanish_ean13_patterns(self, code):
-        """🆕 APLICA PATRONES FARMACÉUTICOS ESPAÑOLES CON VALIDACIÓN ESTRICTA"""
+        """APLICA PATRONES FARMACÉUTICOS ESPAÑOLES CON VALIDACIÓN ESTRICTA"""
         if len(code) != 13:
             return code
         
@@ -712,7 +712,7 @@ class BarcodeDecoder:
                                    cv2.THRESH_BINARY, 11, 2)
     
     def create_decoding_report(self, decoded_results, validation_results=None):
-        """🆕 CREA REPORTE DETALLADO CON INFORMACIÓN FARMACÉUTICA"""
+        """CREA REPORTE DETALLADO CON INFORMACIÓN FARMACÉUTICA"""
         stats = self.get_decoding_statistics(decoded_results)
         rejection_report = self.get_rejection_report()
         
@@ -754,7 +754,7 @@ class BarcodeDecoder:
         return report
     
     def get_decoding_statistics(self, decoded_results):
-        """🆕 ESTADÍSTICAS DE DECODIFICACIÓN CON INFORMACIÓN FARMACÉUTICA"""
+        """ESTADÍSTICAS DE DECODIFICACIÓN CON INFORMACIÓN FARMACÉUTICA"""
         total_codes = len(decoded_results)
         valid_codes = sum(1 for r in decoded_results.values() if r['code'] != "No detectado")
         

@@ -1,4 +1,4 @@
-# core/detectors/grid_detector.py - VERSIÓN CONSERVADORA QUE FUNCIONA
+# core/detectors/grid_detector.py
 
 import cv2
 import numpy as np
@@ -129,7 +129,7 @@ class GridDetector:
         # Ordenar por Y primero
         centroids.sort(key=lambda c: c[1])
         
-        # Agrupar en filas con tolerancia ORIGINAL
+        # Agrupar en filas con tolerancia
         rows = []
         if centroids:
             current_row = [centroids[0]]
@@ -137,7 +137,7 @@ class GridDetector:
                 cx, cy, region = centroids[i]
                 last_cy = current_row[-1][1]
                 
-                if abs(cy - last_cy) < 50:  # Tolerancia ORIGINAL
+                if abs(cy - last_cy) < 50:
                     current_row.append(centroids[i])
                 else:
                     rows.append(current_row)
@@ -166,7 +166,6 @@ class GridDetector:
         
         return ordered_barcodes
     
-    # Método de compatibilidad SIN cambios
     def detect_codes_in_grid(self, image, grid_config):
         """Método de compatibilidad - ORIGINAL"""
         ordered_barcodes = self._detect_with_minimal_improvements(image)

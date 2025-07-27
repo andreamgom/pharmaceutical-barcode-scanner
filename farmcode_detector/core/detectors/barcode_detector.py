@@ -1,4 +1,4 @@
-# core/detectors/barcode_detector.py - CON MÁRGENES ADAPTATIVOS
+# core/detectors/barcode_detector.py
 import cv2
 import numpy as np
 from pathlib import Path
@@ -47,12 +47,10 @@ class BarcodeDetector:
         results = self.model(image, conf=0.3, verbose=self.debug)
         barcode_detections = []
         
-        # ✅ INICIALIZAR VARIABLES SIEMPRE
         boxes = []
         classes = []
         confidences = []
         
-        # ✅ VALIDACIÓN TEMPRANA - SI NO HAY DETECCIONES, IMAGEN INVÁLIDA
         if len(results[0].boxes) == 0:
             if self.debug:
                 print("❌ No se detectaron códigos ni regiones barcode - Imagen inválida")
@@ -93,7 +91,6 @@ class BarcodeDetector:
                 if int(cls) == 0:  # Clase 'code'
                     code_boxes.append(box)
             
-            # ✅ VALIDACIÓN CRÍTICA - SI NO HAY CÓDIGOS, IMAGEN INVÁLIDA
             if not code_boxes:
                 if self.debug:
                     print("❌ No se detectaron códigos individuales - Imagen inválida")

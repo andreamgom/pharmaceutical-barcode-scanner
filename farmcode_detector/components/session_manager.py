@@ -42,10 +42,8 @@ class SessionManager:
                 'auto_cleanup_old_images': True
             }
     
-    # En components/session_manager.py
-    # components/session_manager.py
     def add_processed_image(self, image_name, results, config):
-        """Añade imagen procesada ASEGURANDO que barcode_region se preserve"""
+        """Añade imagen procesada"""
         
         # PRESERVAR LA IMAGEN RECORTADA
         barcode_region = None
@@ -72,7 +70,7 @@ class SessionManager:
             'max_codes': results.get('max_codes', 0),
             'success_rate': results.get('success_rate', 0),
             'decoded_results': results.get('decoded_results', {}),
-            'barcode_region': barcode_region,  # ← IMAGEN PRESERVADA
+            'barcode_region': barcode_region,
             'processing_time': results.get('processing_time', 0),
             'expansion_stats': results.get('expansion_stats', {}),
             'merge_stats': results.get('merge_stats', {})
@@ -94,7 +92,6 @@ class SessionManager:
             
             # Devolver los resultados con acceso directo a las propiedades
             if 'results' in image_data:
-                # Combinar resultados anidados con propiedades directas
                 results = image_data['results'].copy()
                 results.update({
                     'valid_codes': image_data.get('valid_codes', 0),
@@ -116,13 +113,7 @@ class SessionManager:
     def get_current_image_id(self) -> Optional[str]:
         """Obtiene ID de la imagen actual"""
         return st.session_state.get(self.current_key)
-    
-    # def get_current_results(self) -> Optional[Dict[str, Any]]:
-    #     """Obtiene resultados de la imagen actual"""
-    #     current_id = self.get_current_image_id()
-    #     if current_id and current_id in st.session_state.get(self.images_key, {}):
-    #         return st.session_state[self.images_key][current_id]['results']
-    #     return None
+
     
     def get_current_image_info(self) -> Optional[Dict[str, Any]]:
         """Obtiene información completa de la imagen actual"""
@@ -430,7 +421,7 @@ class SessionManager:
             st.session_state[self.current_key] = list(to_keep.keys())[0] if to_keep else None
     
     def update_image_results(self, image_id: str, updated_results: Dict[str, Any]):
-        """Actualiza los resultados de una imagen específica (útil después de editar grid)"""
+        """Actualiza los resultados de una imagen específica"""
         if image_id in st.session_state.get(self.images_key, {}):
             st.session_state[self.images_key][image_id]['results'] = updated_results
             
