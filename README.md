@@ -95,13 +95,18 @@ Para ejecutar la aplicación principal y los scripts de prueba, sigue estos paso
 
 ## Uso
 
-### Ejecutar la Aplicación Web
+### 🚀 Accede a la Aplicación Web
 
-    La aplicación principal implementa el sistema híbrido y ofrece una interfaz gráfica completa.
-    ```
-    cd farmcode_detector/
-    python -m streamlit run streamlit_app.py
-    ```
+**[➡️ Haz clic aquí para probar la aplicación en vivo](https://pharmaceutical-barcode-scanner-dcw2nuusw84klfm7uc9znp.streamlit.app/)**
+
+### Ejecutar la Aplicación en Local
+
+La aplicación principal implementa el sistema híbrido y ofrece una interfaz gráfica completa para ejecutarla en tu propio ordenador.
+
+```
+cd farmcode_detector/
+streamlit run streamlit_app.py
+```
 
 Navega a la URL local que se muestra en la terminal (normalmente `http://localhost:8501`) para empezar a procesar imágenes de cupones.
 

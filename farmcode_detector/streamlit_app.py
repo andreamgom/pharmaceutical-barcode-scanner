@@ -327,7 +327,7 @@ def process_batch_images(uploaded_files, session_manager, config):
             temp_path = save_uploaded_file(uploaded_file)
             
             orchestrator = Orchestrator(
-                yolo_model_path="../runs/detect/yolov10_train7/weights/best.pt",
+                yolo_model_path=config['yolo_model'],
                 debug=True
             )
             
