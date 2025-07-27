@@ -83,7 +83,6 @@ Para ejecutar la aplicación principal y los scripts de prueba, sigue estos paso
     ```
 
 4.  **Instalar dependencias del sistema (para sistemas basados en Debian/Ubuntu):**
-    Algunas librerías como OpenCV y ZBar requieren paquetes del sistema.
     ```
     sudo apt-get update
     sudo apt-get install -y $(cat farmcode_detector/packages.txt)

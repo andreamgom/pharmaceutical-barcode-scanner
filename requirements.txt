@@ -1,21 +1,10 @@
-# Computer Vision
-opencv-python
-pyzbar
-zxing-cpp
-ultralytics
-scikit-image
-Pillow
-
-# Data Handling & Scientific Computing
-numpy
-pandas
-
-# Plotting & Visualization
-matplotlib
-seaborn
-
-# Web & API
-streamlit
-requests
-google-generativeai
-
+streamlit>=1.28.0
+torch>=2.1.0
+torchvision>=0.16.0
+ultralytics>=8.0.0
+numpy>=1.24.0
+opencv-python-headless>=4.8.0
+scikit-image>=0.22.0
+pandas>=2.0.0
+pillow>=10.0.0
+pyzbar>=0.1.8
